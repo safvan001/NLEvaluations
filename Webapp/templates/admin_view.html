@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/b.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:ital,wght@1,600&display=swap">
+</head>
+<body>
+<div class="container">
+    <form>
+        <img src="{{ android_app.image.url }}" alt="..." height="300">
+        <div class="row">
+            <div class="col">
+                <label for="app_name">App name:</label>
+                <input type="text" class="form-control" id="app_name" placeholder="App name" value="{{ android_app.name }}">
+            </div>
+            <div class="col">
+                <label for="app_link">Link:</label>
+                <input type="text" class="form-control" id="app_link" placeholder="Link" value="{{ android_app.link }}">
+            </div>
+             <div class="row">
+            <div class="col">
+                <label for="app_name">Category:</label>
+                <input type="text" class="form-control" id="category" placeholder="Category" value="{{ android_app.category }}">
+            </div>
+            <div class="col">
+                <label for="app_link">Subcategory:</label>
+                <input type="text" class="form-control" id="subcategory" placeholder="Subcategory" value="{{ android_app.subcategory }}">
+            </div>
+        </div>
+        <br>
+    </form>
+    <br><br>
+
+    <div class="center-button">
+        <a class="btn btn-info" type="submit">{{ android_app.points }} Points</a><br><br>
+        <a class="btn btn-warning" type="submit">SUBMIT</a>
+    </div>
+</div>
+</body>
+</html>

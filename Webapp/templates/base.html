@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+     <link rel="stylesheet" href="{% static 'CSS/a.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:ital,wght@1,600&display=swap">
+
+
+<style>
+body {
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(to bottom, #f9f9f9, #ddd); /* Gradient from white to light gray */
+}
+.menu{
+width:400px;
+hieght:70px;
+ }
+
+
+
+</style>
+</head>
+<body>
+<header>
+<div class="menu">
+  <form class="container-fluid justify-content-start">
+    <a class="btn btn-outline-success me-2" type="button" href="{% url 'Androidapp:adminregistration' %}"> ADMIN SIGN-UP</a>
+      <a class="btn btn-outline-success me-2" type="button" href="{% url 'Androidapp:admin_login' %}"> ADMIN LOGIN</a>
+    <a class="btn btn-outline-success me-2" type="button" href="{% url 'Androidapp:register' %}"> USER SIGN-UP</a>
+      <a class="btn btn-outline-success me-2" type="button" href="{% url 'Androidapp:login' %}"> USER LOGIN</a>
+  </form>
+</div>
+</header>
+{% block content %}
+{% endblock %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-ZJpNb90tj1aX3iZv7vG5j13KSOmB8YVI3pod27dgfF/rSP7cN1VWW6d+KXTRIiS" crossorigin="anonymous"></script>
+</body>
+</html>
